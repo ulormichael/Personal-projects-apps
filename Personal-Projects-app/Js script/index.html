@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript</title>
+    <link rel="stylesheet" type="text/css" href="" />
+  </head>
+  <body>
+    <h1>Javascript</h1>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
