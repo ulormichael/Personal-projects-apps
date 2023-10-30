@@ -2,9 +2,9 @@ const score = document.querySelector('.score');
 const highScore = document.querySelector('.highScore');
 const startScreen = document.querySelector('.startScreen');
 const gameArea = document.querySelector('.gameArea');
-const clickToStart = document.querySelector('.clickToStart'); // Corrected variable name
+const clickToStart = document.querySelector('.clickToStart'); 
 
-clickToStart.addEventListener('click', Start); // Corrected event listener
+clickToStart.addEventListener('click', Start); 
 document.addEventListener('keydown', keydown);
 document.addEventListener('keyup', keyup);
 let keys = {
@@ -31,7 +31,7 @@ function Start() {
   player.score = 0;
   window.requestAnimationFrame(Play);
 
-  for (let i = 0; i < 3; i++) { // Corrected the loop syntax
+  for (let i = 0; i < 3; i++) { 
     let roadLines = document.createElement('div');
     roadLines.setAttribute('class', 'roadLines');
     roadLines.y = i * 140;
@@ -39,17 +39,17 @@ function Start() {
     gameArea.appendChild(roadLines);
   }
 
-  for (let i = 0; i < 3; i++) { // Corrected the loop syntax
-    let Opponent = document.createElement('div'); // Corrected variable name
+  for (let i = 0; i < 3; i++) { 
+    let Opponent = document.createElement('div'); 
     Opponent.setAttribute('class', 'Opponents');
-    Opponent.y = -300; // Corrected value
+    Opponent.y = -300; 
     Opponent.style.top = Opponent.y + 'px';
     gameArea.appendChild(Opponent);
     Opponent.style.left = Math.floor(Math.random() * 350) + 'px';
     Opponent.style.backgroundColor = randomColor();
   }
 
-  for (let i = 0; i < 3; i++) { // Corrected the loop syntax
+  for (let i = 0; i < 3; i++) { 
     let car = document.createElement('div');
     car.setAttribute('class', 'car');
     gameArea.appendChild(car);
@@ -60,13 +60,13 @@ function Start() {
 function randomColor() {
   function c() {
     let hex = Math.floor(Math.random() * 256).toString(16);
-    return ('00' + String(hex)).substr(-2); // Corrected padding
+    return ('00' + String(hex)).substr(-2); 
   }
   return '#' + c() + c() + c();
 }
 function Play() {
   let car = document.querySelector('.car');
-  let road = gameArea.getBoundingClientRect(); // Corrected the method
+  let road = gameArea.getBoundingClientRect(); 
 
   if (player.isStart) {
     moveLines();
@@ -80,7 +80,7 @@ function Play() {
     if (keys.ArrowLeft && player.x < 350) {
       player.x += player.speed;
     }
-    if (keys.ArrowRight && player.x > 0) { // Corrected ArrowLeft to ArrowRight
+    if (keys.ArrowRight && player.x > 0) { 
       player.x -= player.speed;
     }
     car.style.top = player.y + 'px';
@@ -115,7 +115,7 @@ function moveOpponents(car) {
     }
     if (item.y >= 750) {
       item.y -= 900;
-      item.style.left = Math.floor(Math.random() * 350) + 'px'; // Corrected concatenation
+      item.style.left = Math.floor(Math.random() * 350) + 'px'; 
     }
     item.y += player.speed;
     item.style.top = item.y + 'px';

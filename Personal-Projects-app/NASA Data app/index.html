@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width="device-width, initial-scale="1.0" />
-    <title>NASA Ulorseries</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https:// fonts.gstatic.com" />
-     <link href="https://fonts.googleapis.com/css2?
-     family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌌 NASA's Cosmic Discoveries 🚀</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        
+    </style>
 </head>
 <body>
     <div class="text">
-        <h1>Nasa Just detected an Astroid. Do you copy?</h1>
-        </div>
-        <button class="custom-btn btn-16" id="get">Get Data</button>
+        <h1>Welcome to NASA's Cosmic Discoveries 🌠</h1>
     </div>
-    <div id="container"></div>
+    <div id="container">
+        <img src="images/NASA_1.jpg" alt="Space Image">
+    </div>
+    <button class="custom-btn btn-16" id="get">Explore the Universe</button>
+    <div id="output"></div>
 
-    <script src="app.js"></script>
+    <script>
+        const button = document.getElementById('get');
+        const output = document.getElementById('output');
+        let buttonTextClicked = false;
+
+        button.addEventListener('click', () => {
+            if (!buttonTextClicked) {
+                button.innerHTML = "Fetching Data 🌌";
+                button.style.backgroundColor = "#ff5733"; 
+                buttonTextClicked = true;
+                output.innerHTML = "Fetching data from NASA...";
+                
+            } else {
+               
+                buttonTextClicked = false;
+                button.innerHTML = "Explore the Universe";
+                button.style.backgroundColor = "#ff5733"; 
+                output.innerHTML = "Data fetched successfully!";
+            }
+        });
+    </script>
 </body>
 </html>

@@ -8,6 +8,7 @@
     background-image: url(images/bg1.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    margin-top: -auto;
 }
 
 .hide {
@@ -30,7 +31,7 @@
 }
 
 .score,
-.highscore { /* Corrected '.highscore' to '.highScore' for consistency */
+.highscore { 
     position: absolute;
     top: 10px;
     left: 20px;
@@ -41,9 +42,10 @@
     line-height: 40px;
     border-radius: 4px;
     font-size: 1.2em;
+    margin-top: 0;
 }
 
-.ClicktoStart { /* Corrected 'ClicktoStart' to 'clickToStart' for consistency */
+.ClicktoStart { 
     cursor: pointer;
 }
 
@@ -69,7 +71,7 @@
 }
 
 .car1 {
-    background: url(images/car1.png); /* Replace with the path to your car1 image */
+    background: url(images/car1.png); 
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 75%;
@@ -79,7 +81,7 @@
 }
 
 .car2 {
-    background: url(images/car2.png); /* Replace with the path to your car2 image */
+    background: url(images/car2.png); 
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 75%;
@@ -89,7 +91,7 @@
 }
 
 .car3 {
-    background: url(images/car3.png); /* Replace with the path to your car2 image */
+    background: url(images/car3.png); 
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 75%;
@@ -99,7 +101,7 @@
 }
 
 .car4 {
-    background: url(images/car4.png); /* Replace with the path to your car4 image */
+    background: url(images/car4.png); 
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 75%;
