@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200, 400&display=swap');
+
+:root{
+    --primary-color: #22254b;
+    --secondary-color: #373b69;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: var(--primary-color);
+}
+
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    align-items: center;
+}
+
+h1{
+    color: #fff;
+    text-shadow: 0 2px 2px black;
+}
+
+.search{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #ffff;
+    font-family: inherit;
+}
+
+.search::placeholder{
+    color: #7378c5;
+}
+
+.search:focus{
+    outline: none;
+    background-color: var(--primary-color);
+    border: 2px solid rgb(143, 58, 189);
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.movie{
+    width: 250px;
+    margin: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.movie img{
+    width: 100%;
+}
+
+.movie-info{
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+    gap: 0.2rem;
+}
+
+.movie-info h3{
+    margin-top: 0;
+}
+
+.movie-info span{
+    background-color: var(--primary-color);
+    padding: 0.5rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    transform: translateX(10px);
+}
+
+.movie-info span.green {
+    color: lightgreen;
+}
+
+.movie-info span.orange{
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+.overview {
+    background-color: rgb( 233, 230, 230);
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+    font-family: inherit;
+    color: var(--secondary-color);
+}
+
+h3{
+    color: var(--primary-color);
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
+
